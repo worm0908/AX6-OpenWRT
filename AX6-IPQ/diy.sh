@@ -25,7 +25,7 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/l
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
 
 # 替换luci-app-openvpn-server imm源的启动不了服务！
-#rm -rf feeds/luci/applications/luci-app-openvpn-server
+rm -rf feeds/luci/applications/luci-app-openvpn-server
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openvpn-server
 # 调整 openvpn-server 到 VPN 菜单
 #sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/controller/*.lua
@@ -49,7 +49,7 @@ rm -rf feeds/luci/applications/luci-app-argon-config
 
 
 #修改默认IP
-#sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 #修改主机名
-#sed -i "s/hostname='ImmortalWrt'/hostname='Redmi-AX6'/g" package/base-files/files/bin/config_generate
+sed -i "s/hostname='ImmortalWrt'/hostname='RT-SY'/g" package/base-files/files/bin/config_generate
